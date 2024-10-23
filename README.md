@@ -5,10 +5,15 @@ Granger recurrent autoencoders to network gene expression regulations
 GRANGER requires you to create a PyTorch environment and install the following packages
 
 python                    3.11.5 
+
 pytorch                   2.1.0
+
 pandas                    2.1.4
+
 scanpy                    1.10.1
+
 scikit-learn              1.2.2
+
 numpy                     1.26.0 
 
 
