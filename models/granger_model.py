@@ -4,7 +4,7 @@ import torch.nn as nn
 import numpy as np
 import pandas as pd
 import torch.nn.functional as F
-from proprocess import get_lable_dic,to_causal_arr,filtered_predict_pair
+from models.utils import get_lable_dic,to_causal_arr,filtered_predict_pair
 from copy import deepcopy
 import torch.optim as optim
 class NBLoss(nn.Module):
@@ -178,11 +178,11 @@ class GRANGER(nn.Module):
               for net in self.networks]
         GC = torch.stack(GC)
         # print(GC)
-        label_pair= get_lable_dic('example data/mCAD-2000-1/refNetwork.csv')#format label file,input it's path
+        label_pair= get_lable_dic('example_data/mCAD-2000-1/refNetwork.csv')#format label file,input it's path
         predict_pair=None
         if threshold:
             np.savetxt('GC_cell.csv', GC.detach().cpu().numpy(), delimiter=',',fmt='%.20f')#GC matrix file path
-            predict_pair = to_causal_arr('GC_cell.csv','example data/mCAD-2000-1/ExpressionData.csv')    #ExpressionData file path
+            predict_pair = to_causal_arr('GC_cell.csv','example_data/mCAD-2000-1/ExpressionData.csv')    #ExpressionData file path
             filtered_predict_pair(label_pair,predict_pair)
             return (torch.abs(GC) > 0).int() 
         else:
