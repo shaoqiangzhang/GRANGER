@@ -5,7 +5,7 @@ import time
 from models.granger_model import GRANGER, train_phase1
 
 device = torch.device('cuda')
-X_np = np.load('example data/mCAD-2000-1/time_output.npy').T 
+X_np = np.load('example_data/mCAD-2000-1/time_output.npy').T 
 # print(X_np.shape) 
 dim = X_np.shape[-1] 
 GC = np.zeros([dim,dim])
