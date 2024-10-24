@@ -20,7 +20,7 @@ numpy                     1.26.0
 ## Scripts
 ### The code of GRANGER mainly includes the following scripts:
 
-**models/granger_model.py**: the core code of the GRANGER model. It will generate a Granger Causal(GC) matrix will be generated ( save as "GC_cell.csv"). 
+**models/granger_model.py**: the core code of the GRANGER model. A Granger Causal(GC) matrix will be generated and saved as "GC_cell.csv". 
 
 **models/utils.py**: define some functions that you can use to obtain list of transcription factors (tf_list) and gene expression matrix, and format label files and calculate AUROC and AUPRC scores.
 
