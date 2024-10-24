@@ -22,7 +22,7 @@ numpy                     1.26.0
 
 **models/granger_model.py**: the core code of the GRANGER model. A Granger Causal(GC) matrix will be generated and saved as "GC_cell.csv". 
 
-**models/utils.py**: define some functions that you can use to obtain list of transcription factors (tf_list) and gene expression matrix, and format label files and calculate AUROC and AUPRC scores.
+**models/utils.py**: define some functions for obtaining list of transcription factors (tf_list) and gene expression matrix, and formating label files and calculating AUROC and AUPRC scores.
 
 **generate_npy.py**: this script is used to process data with time-series information, which can reorder cells in "ExpressionData.csv" according to the pseudotime information in "PseudoTime.csv" and generate a new numpy file (.npy). For data without time  information, you can use "to_npy" to directly generate an input file.
 
