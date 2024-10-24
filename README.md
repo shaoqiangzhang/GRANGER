@@ -32,9 +32,12 @@ numpy                     1.26.0
 
 ## Usage
 ### Step 1: preprocess data into .npy format 
-If you use the ".npy" file we provided, you can directly infer gene regulatory networks. 
-If you want to use your own dataset, you are required to use "scanpy_paga.py" to preprocess the datasets to obtain two csv files (ExpressionData.csv and PseudoTime.csv).
-then, use "generate_npy.py" to merge ExpressionData.csv and PseudoTime.csv and transfer into .npy format (save as "time_output.npy").
+Case 1: If you use the ".npy" files we provided in the example_data directory, you can directly use the file to run our model. 
+
+Case 2: If you use a dataset from BEELINE, which contains two csv files (ExpressionData.csv and PseudoTime.csv), 
+you can use "generate_npy.py" to merge ExpressionData.csv and PseudoTime.csv and transfer into .npy format (save as "time_output.npy").
+
+Case 3: If you want to use your own dataset, you are required to use "scanpy_paga.py" to preprocess your dataset and predict pseudotime to obtain a .npy file. 
 
 ### Step 2: run a demo
 Modify the file path in GRANGER_demo.py and models/granger_model.py to yours, and then run GRANGER_demo.py directly.
