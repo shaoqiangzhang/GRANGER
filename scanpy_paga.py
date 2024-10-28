@@ -18,7 +18,7 @@ adata = adata[:, adata.var.highly_variable]
 sc.pp.neighbors(adata, n_neighbors=10, n_pcs=10)
 sc.tl.louvain(adata)
 sc.tl.paga(adata)
-adata = data[adata.obs['louvain'].argsort()]
+adata = adata[adata.obs['louvain'].argsort()]
 
 new_csv_file = 'ExpressionData.csv'
 data_transposed = adata.copy().T
